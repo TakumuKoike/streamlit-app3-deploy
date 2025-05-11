@@ -35,7 +35,7 @@ RETRIEVER_WEIGHTS = [0.5, 0.5]
 # ==========================================
 # RAG参照用のデータソース系
 # ==========================================
-RAG_SOURCE_PATH = "./data/products.csv"
+RAG_SOURCE_PATH = r"C:\Users\takum\streamlit-app\streamlit-app3-deploy\data\products.csv"
 
 
 # ==========================================
