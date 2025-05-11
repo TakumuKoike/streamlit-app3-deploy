@@ -95,7 +95,8 @@ def initialize_retriever():
     if "retriever" in st.session_state:
         return
     
-    loader = CSVLoader(ct.RAG_SOURCE_PATH, encoding="utf-8")
+    loader = CSVLoader(ct.RAG_SOURCE_PATH, encoding="cp932") # 2025/5/11 文字コードANJIで保存されたCSVファイルを読み込めるようにする
+    #loader = CSVLoader(ct.RAG_SOURCE_PATH, encoding="utf-8") # 2025/5/11 パスの読み込みに失敗する
     docs = loader.load()
 
     # OSがWindowsの場合、Unicode正規化と、cp932（Windows用の文字コード）で表現できない文字を除去
